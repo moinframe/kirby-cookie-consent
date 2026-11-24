@@ -151,8 +151,8 @@ fields:
             required: true
             width: 1/2
             help:
-              de: "* steht für beliebige Zeichen, z. B. _pk_id.*"
-              en: "* matches any characters, e.g. _pk_id.*"
+              de: "\* steht für beliebige Zeichen, z. B. _pk_id.*"
+              en: "\* matches any characters, e.g. _pk_id.*"
           duration:
             label:
               de: Speicherdauer
