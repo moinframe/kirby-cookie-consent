@@ -1,0 +1,26 @@
+parameters:
+    level: 8
+
+    paths:
+        - index.php
+        - src
+        - snippets
+
+    excludePaths:
+        analyseAndScan:
+            - vendor
+            - node_modules (?)
+            # generated installs symlink this repo back in as a plugin, so scanning them recurses forever
+            - .kirbyenv (?)
+
+    tmpDir: .phpstan-cache
+
+    ignoreErrors:
+        # Kirby resolves content fields and field methods through __call
+        -
+            identifier: method.notFound
+            message: '#^Call to an undefined method Kirby\\(Cms\\(Site|StructureObject)|Content\\Field)::#'
+
+includes:
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+    - vendor/phpstan/phpstan-deprecation-rules/rules.neon

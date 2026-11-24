@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Consent</title>
+  </head>
+  <body>
+    <h1>Cookie Consent dev page</h1>
+    <p><button type="button" onclick="CookieConsent.openSettings()">Cookie settings</button></p>
+    <cookie-consent
+      options='{"cookieName":"cc_policies","blockPage":false,"expires":365,"locale":"en","position":"bottom-right","reload":false}'
+      categories='[{"id":"essential","label":"Essential","description":"Needed for the website to work.","required":true},{"id":"statistics","label":"Statistics","description":"Help us understand how visitors use the website.","required":false}]'
+      policies='[{"id":"consent","label":"Cookie consent","description":"Remembers your choice in this banner.","category":"essential","provider":"This website","location":"EU","privacy":"","cookies":[{"name":"cc_policies","duration":"1 year"}],"revision":"1"},{"id":"matomo","label":"Matomo","description":"Anonymous visitor statistics.","category":"statistics","provider":"This website","location":"EU","privacy":"https://matomo.org/privacy-policy/","cookies":[{"name":"_pk_id.*","duration":"13 months"},{"name":"_pk_ses.*","duration":"30 minutes"}],"revision":"1"}]'
+      links='[{"label":"Privacy policy","url":"#privacy"},{"label":"Imprint","url":"#imprint"}]'
+      translations='{"en":{"moinframe.cookie-consent.start.headline":"Cookie Management","moinframe.cookie-consent.start.text":"We use cookies to run our website and analyze user interaction.","moinframe.cookie-consent.settings.headline":"Settings","moinframe.cookie-consent.settings.text":"Here you can choose individually, which cookies you wish to consent to.","moinframe.cookie-consent.settings.required":"Always active","moinframe.cookie-consent.settings.new":"New","moinframe.cookie-consent.settings.changed":"Updated","moinframe.cookie-consent.settings.details":"Details","moinframe.cookie-consent.details.provider":"Provider","moinframe.cookie-consent.details.location":"Processing location","moinframe.cookie-consent.details.cookies":"Cookies","moinframe.cookie-consent.details.privacy":"Privacy policy of the provider","moinframe.cookie-consent.buttons.decline":"Decline","moinframe.cookie-consent.buttons.cancel":"Cancel","moinframe.cookie-consent.buttons.save":"Save","moinframe.cookie-consent.buttons.acceptall":"Accept all","moinframe.cookie-consent.buttons.settings":"Edit settings"}}'
+    ></cookie-consent>
+    <script type="text/plain" data-cookie-consent="matomo">console.log("Cookie Consent: matomo script ran");</script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

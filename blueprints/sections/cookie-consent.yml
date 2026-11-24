@@ -5,7 +5,20 @@ fields:
       de: Cookie Consent Verwaltung
       en: Cookie Consent Manager
     type: headline
-    numbered: false
+  cookieprivacypage:
+    label:
+      de: Datenschutzerklärung
+      en: Privacy policy
+    type: pages
+    multiple: false
+    width: 1/2
+  cookieimprintpage:
+    label:
+      de: Impressum
+      en: Imprint
+    type: pages
+    multiple: false
+    width: 1/2
   cookiecategories:
     label:
       de: Kategorien
@@ -13,6 +26,7 @@ fields:
     type: structure
     columns:
       label:
+      required:
     fields:
       label:
         label:
@@ -39,13 +53,25 @@ fields:
           de: Einzigartige Kennung, mit der die Kategorie gefunden werden kann.
           en: Unique identifier that matches the category.
         required: true
+      required:
+        label:
+          de: Erforderlich
+          en: Required
+        type: toggle
+        help:
+          de: Richtlinien dieser Kategorie sind immer aktiv und können nicht abgewählt werden. Nur für Cookies, ohne die die Webseite nicht funktioniert.
+          en: Policies in this category are always active and can't be switched off. Only for cookies the website can't work without.
   cookiepolicies:
     label:
       de: Richtlinien
       en: Policies
     type: structure
+    help:
+      de: Ändern sich Beschreibung, Kategorie, Anbieter, Verarbeitungsort oder Cookies einer Richtlinie, werden Besucher erneut gefragt.
+      en: When the description, category, provider, processing location or cookies of a policy change, visitors are asked again.
     columns:
       label:
+      category:
     fields:
       label:
         label:
@@ -69,6 +95,7 @@ fields:
           en: Unique identifier that matches the policy.
         type: slug
         required: true
+        width: 1/2
         wizard:
           field: label
           text: " "
@@ -77,12 +104,61 @@ fields:
           de: Kategorie
           en: Category
         type: select
-        options: query
+        width: 1/2
         help:
           de: Bitte erstellen Sie zunächst mindestens eine Kategorie und laden Sie die Seite neu, um Richtlinien anlegen zu können.
           en: Please add at least one category and reload the page before adding policies.
-        query:
-          fetch: site.cookiecategories.toStructure
-          text: "{{ structureItem.label }}"
-          value: "{{ structureItem.id }}"
+        options:
+          type: query
+          query: site.cookiecategories.toStructure
+          text: "{{ item.label }}"
+          value: "{{ item.id }}"
         required: true
+      provider:
+        label:
+          de: Anbieter
+          en: Provider
+        type: text
+        width: 1/2
+      location:
+        label:
+          de: Ort der Verarbeitung
+          en: Processing location
+        type: text
+        width: 1/2
+        placeholder:
+          de: z. B. EU, USA
+          en: e.g. EU, USA
+      privacy:
+        label:
+          de: Datenschutzerklärung des Anbieters
+          en: Provider's privacy policy
+        type: url
+      cookies:
+        label:
+          de: Cookies
+          en: Cookies
+        type: structure
+        columns:
+          name:
+          duration:
+        fields:
+          name:
+            label:
+              de: Name
+              en: Name
+            type: text
+            required: true
+            width: 1/2
+            help:
+              de: "* steht für beliebige Zeichen, z. B. _pk_id.*"
+              en: "* matches any characters, e.g. _pk_id.*"
+          duration:
+            label:
+              de: Speicherdauer
+              en: Duration
+            type: text
+            width: 1/2
+            placeholder:
+              de: z. B. 13 Monate, Sitzung
+              en: e.g. 13 months, session

@@ -1,0 +1,79 @@
+Title: Cookie Consent
+
+----
+
+Cookieprivacypage:
+
+- page://cc-privacy
+
+----
+
+Cookieimprintpage:
+
+- page://cc-imprint
+
+----
+
+Cookiecategories:
+
+- 
+  label: Essential
+  description: '<p>Needed for the website to work, e.g. the language you chose.</p>'
+  id: essential
+  required: true
+- 
+  label: Statistics
+  description: '<p>We''d like to measure "visits" & <clicks> to improve the site.</p>'
+  id: statistics
+  required: false
+- 
+  label: External media
+  description: '<p>Videos and maps from other providers.</p>'
+  id: media
+  required: false
+
+----
+
+Cookiepolicies:
+
+- 
+  label: Cookie consent
+  description: '<p>Remembers your choice in this banner.</p>'
+  id: consent
+  category: essential
+  provider: This website
+  location: EU
+  privacy: ""
+  cookies:
+    - 
+      name: cc_policies
+      duration: 1 year
+- 
+  label: Matomo
+  description: '<p>Anonymous visitor statistics, hosted on our own server.</p>'
+  id: matomo
+  category: statistics
+  provider: This website
+  location: EU
+  privacy: ""
+  cookies:
+    - 
+      name: _pk_id.*
+      duration: 13 months
+    - 
+      name: _pk_ses.*
+      duration: 30 minutes
+- 
+  label: YouTube
+  description: '<p>Embedded videos. YouTube may set cookies once you've agreed.</p>'
+  id: youtube
+  category: media
+  provider: Google Ireland Limited
+  location: USA (EU-US Data Privacy Framework)
+  privacy: https://policies.google.com/privacy
+  cookies: [ ]
+- 
+  label: OpenStreetMap
+  description: '<p>Embedded maps.</p>'
+  id: osm
+  category: media

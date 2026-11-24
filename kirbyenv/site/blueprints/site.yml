@@ -1,0 +1,11 @@
+title: Site
+
+tabs:
+  pages:
+    sections:
+      pages:
+        type: pages
+  cookies:
+    label: Cookies
+    sections:
+      cookieconsent: sections/cookie-consent

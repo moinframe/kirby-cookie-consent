@@ -1,0 +1,9 @@
+Title: Privacy policy
+
+----
+
+Text: The banner stays out of the way here, even with blockPage.
+
+----
+
+Uuid: cc-privacy

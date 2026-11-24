@@ -1,8 +1,17 @@
-node_modules
-.env
-vendor
-kirby
+# OS and editor files
 .DS_Store
 .idea
+.env
+
+# Dependencies
+/node_modules
+/vendor
+/kirby
 composer.lock
+
+# Generated test environments (see .kirbyenv.php)
+/.kirbyenv
+
+# Caches
 *.cache
+/.phpstan-cache

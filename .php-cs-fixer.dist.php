@@ -1,6 +1,6 @@
 <?php
 
-$finder = PhpCsFixer\Finder::create()->exclude('kirby')->in(__DIR__);
+$finder = PhpCsFixer\Finder::create()->exclude(['kirby', 'node_modules', 'frontend'])->in(__DIR__);
 
 $config = new PhpCsFixer\Config();
 return $config
@@ -16,7 +16,7 @@ return $config
         'concat_space' => ['spacing' => 'one'],
         'declare_equal_normalize' => ['space' => 'single'],
         'dir_constant' => true,
-        'function_typehint_space' => true,
+        'type_declaration_spaces' => true,
         'include' => true,
         'logical_operators' => true,
         'lowercase_cast' => true,
@@ -27,8 +27,8 @@ return $config
         'modernize_types_casting' => true,
         'multiline_comment_opening_closing' => true,
         'native_function_casing' => true,
-        'native_function_type_declaration_casing' => true,
-        'new_with_braces' => true,
+        'native_type_declaration_casing' => true,
+        'new_with_parentheses' => true,
         'no_blank_lines_after_class_opening' => true,
         'no_blank_lines_after_phpdoc' => true,
         'no_empty_comment' => true,
