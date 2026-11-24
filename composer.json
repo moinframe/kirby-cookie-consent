@@ -4,7 +4,7 @@
     "homepage": "https://github.com/moinframe/kirby-cookie-consent",
     "license": "MIT",
     "type": "kirby-plugin",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "keywords": [
         "kirby",
         "kirby-plugin",

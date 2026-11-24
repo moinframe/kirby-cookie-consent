@@ -1,4 +1,11 @@
+# Changelog
 
+## [1.0.0](https://github.com/moinframe/kirby-cookie-consent/compare/v0.2.0...v1.0.0) (2026-11-24)
+
+### Bug Fixes
+
+* escape in blueprint ([d2d86cf](https://github.com/moinframe/kirby-cookie-consent/commit/d2d86cfd4f572ebb46bde6addcc163e091fc50ce))
+* update license ([0ef23d0](https://github.com/moinframe/kirby-cookie-consent/commit/0ef23d0ac6cabfc3d174dd1512cb7332991bd3ab))
 
 ## [0.2.0](https://github.com/femundfilou/kirby-cookie-consent/compare/v0.1.0...v0.2.0) (2023-10-19)
 
